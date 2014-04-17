@@ -76,7 +76,7 @@ var ClusterHealthView = Backbone.View.extend({
         for (var $i = 0; $i < indexValues.length; $i++) {
             var index = indexValues[$i];
             index.name = index.id;
-            if (versionUtil.isNewer("0.99.0", cluster.versionNumber.concat)) {
+            if (versionUtil.isNewer("0.99.0", cluster.get("versionNumber").concat)) {
                 index.numshards = this.stateModel.get('metadata').indices[index.id].settings.index.number_of_shards;
                 index.numreplicas = this.stateModel.get('metadata').indices[index.id].settings.index.number_of_replicas;
             }
