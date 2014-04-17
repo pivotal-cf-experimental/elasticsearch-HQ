@@ -15,7 +15,7 @@
 
  Latest Builds: https://github.com/royrusso/elasticsearch-HQ
 
- http://localhost:9200/_cluster/nodes
+ http://localhost:9200/_nodes
  */
 
 var NodeInfoListModel = Backbone.Model.extend({
@@ -28,7 +28,7 @@ var NodeInfoListModel = Backbone.Model.extend({
     url:function () {
         var sNodes = this.get('selectedNodes');
         if (sNodes == undefined || sNodes.length == 0) {
-            return '/_cluster/nodes?all=1';
+            return '/_nodes?all=1';
         }
         else {
             var nodes = '';
@@ -38,7 +38,7 @@ var NodeInfoListModel = Backbone.Model.extend({
                     nodes = nodes + ',';
                 }
             }
-            return '/_cluster/nodes/' + nodes;
+            return '/_nodes/' + nodes;
         }
     }
 

@@ -70,7 +70,7 @@ endPointMap.CLUSTER = function (action) {
         "/_cluster/health",
         "/_cluster/state",
         "/_cluster/pending_tasks",
-        "/_cluster/nodes/stats"
+        "/_nodes/stats"
     ];
 /*
     ep.PUT = [

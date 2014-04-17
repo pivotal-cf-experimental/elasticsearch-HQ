@@ -15,7 +15,7 @@
 
  Latest Builds: https://github.com/royrusso/elasticsearch-HQ
 
- http://localhost:9200/_cluster/nodes
+ http://localhost:9200/_nodes
  */
 
 var NodeHotThreadsModel = Backbone.Model.extend({

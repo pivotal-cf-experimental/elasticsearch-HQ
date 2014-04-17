@@ -15,10 +15,10 @@
 
  Latest Builds: https://github.com/royrusso/elasticsearch-HQ
 
- http://localhost:9200/_cluster/nodes
+ http://localhost:9200/_nodes
  */
 
-//http://localhost:9200/_cluster/nodes/nodeId1,nodeId2/_shutdown
+//http://localhost:9200/_nodes/nodeId1,nodeId2/_shutdown
 
 var NodeShutdownModel = Backbone.Model.extend({
     defaults:{
@@ -29,7 +29,7 @@ var NodeShutdownModel = Backbone.Model.extend({
         this.nodeId = args.nodeId;
     },
     url:function () {
-        return '/_cluster/nodes/' + this.nodeId + '/_shutdown';
+        return '/_nodes/' + this.nodeId + '/_shutdown';
     }
 
 });

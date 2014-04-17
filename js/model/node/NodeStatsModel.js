@@ -15,7 +15,7 @@
 
  Latest Builds: https://github.com/royrusso/elasticsearch-HQ
 
- http://localhost:9200/_cluster/nodes/XXX/stats
+ http://localhost:9200/_nodes/XXX/stats
  */
 
 /*****
@@ -31,7 +31,7 @@ var NodeStatsModel = Backbone.Model.extend({
         this.nodeId = args.nodeId;
     },
     url:function () {
-        return '/_cluster/nodes/' + this.nodeId + '/stats?all=true&plugin=true';
+        return '/_nodes/' + this.nodeId + '/stats?all=true&plugin=true';
     },
     fetch:function (options) {
         console.log('Fetching NodeStats');
